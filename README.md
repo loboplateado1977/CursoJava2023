@@ -1,1 +1,1 @@
-# CursoJava2023 guia de trabajos practicos 2
+# Curso Java2023 guia de trabajos practicos etapa java 2
