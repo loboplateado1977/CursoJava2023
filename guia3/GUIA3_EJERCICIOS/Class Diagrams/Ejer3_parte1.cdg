@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejer3_parte1">
+  <ClassDiagramComponents>
+    <Class name="E3_Auto" package="" visibility="public" xPosition="33.0" yPosition="93.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="patente" type="String" visibility="private"/>
+        <Field name="combustible" type="float" visibility="private"/>
+        <Field name="rueda1" type="E3_Rueda" visibility="private"/>
+        <Field name="rueda2" type="E3_Rueda" visibility="private"/>
+        <Field name="rueda3" type="E3_Rueda" visibility="private"/>
+        <Field name="rueda4" type="E3_Rueda" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="avanzar" returnType="void" visibility="public"/>
+        <Method name="retrocedar" returnType="void" visibility="public"/>
+        <Method name="llenarTanque" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="E3_Rueda" package="" visibility="public" xPosition="461.0" yPosition="144.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="presion" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="inflar" returnType="void" visibility="public"/>
+        <Method name="pinchar" returnType="void" visibility="public"/>
+        <Method name="desinflar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="E3_Auto" target="E3_Rueda" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejer4_parte1">
+  <ClassDiagramComponents>
+    <Class name="E4_Robot" package="" visibility="public" xPosition="44.0" yPosition="262.0">
+      <Fields>
+        <Field name="pasosA" type="int" visibility="private"/>
+        <Field name="pasosR" type="int" visibility="private"/>
+        <Field name="energia" type="int" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="dormir" returnType="void" visibility="public"/>
+        <Method name="despertar" returnType="void" visibility="public"/>
+        <Method name="recargar" returnType="void" visibility="public"/>
+        <Method name="bateriaLlena" returnType="boolean" visibility="public"/>
+        <Method name="bateriaVacia" returnType="boolean" visibility="public"/>
+        <Method name="energiaActual" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="E4_Bateria" package="" visibility="public" xPosition="345.0" yPosition="313.0">
+      <Fields>
+        <Field name="carga" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="E4_Hombre" package="" visibility="public" xPosition="31.0" yPosition="17.0">
+      <Fields>
+        <Field name="robot" type="E4_Robot" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="jugarConRobot" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="E4_Robot" target="E4_Bateria" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="E4_Hombre" target="E4_Robot" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

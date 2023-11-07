@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio1">
+  <ClassDiagramComponents>
+    <Class name="E1_Gps" package="" visibility="public" xPosition="66.0" yPosition="60.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="ultimaPosicion" type="E1_Posicion" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerUltimaPosicion" returnType="void" visibility="public"/>
+        <Method name="mover" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="E1_Posicion" package="" visibility="public" xPosition="532.0" yPosition="119.0">
+      <Fields>
+        <Field name="latitud" type="double" visibility="private"/>
+        <Field name="longitud" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="E1_Persona" package="" visibility="public" xPosition="348.0" yPosition="341.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="ubicarme" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="tiene" source="E1_Persona" target="E1_Gps" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="E1_Gps" target="E1_Posicion" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

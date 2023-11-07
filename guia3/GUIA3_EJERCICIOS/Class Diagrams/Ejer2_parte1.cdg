@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejer2_parte1">
+  <ClassDiagramComponents>
+    <Class name="E2_Kiosco" package="" visibility="public" xPosition="39.0" yPosition="85.0">
+      <Fields>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="cuit" type="int" visibility="private"/>
+        <Field name="empleado1" type="E2_Empleado" visibility="private"/>
+        <Field name="empleado2" type="E2_Empleado" visibility="private"/>
+        <Field name="empleado3" type="E2_Empleado" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="E2_Empleado" package="" visibility="public" xPosition="487.0" yPosition="103.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="fecha" type="DateTime" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="E2_Kiosco" target="E2_Empleado" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
